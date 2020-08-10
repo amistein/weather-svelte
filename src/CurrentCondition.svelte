@@ -30,6 +30,7 @@
   }
 
   .temp {
+    margin-top: 3rem;
     height: 15rem;
     width: 15rem;
     border: 5px solid orangered;
@@ -38,7 +39,7 @@
     position: relative;
   }
 
-  .temp > p {
+  .current-temp {
     font-size: 5.4rem;
     /* color: orangered; */
     position: absolute;
@@ -51,6 +52,19 @@
     display: block;
     content: "";
     clear: both;
+  }
+
+  .humidity {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #495d71;
+    position: absolute;
+    top: -25%;
+    left: 5%;
+  }
+
+  .humidity > span {
+    font-size: 2rem;
   }
 
   .quickie {
@@ -95,7 +109,8 @@
 <div class="container">
   <div class="top">
     <div class="temp" style="{`border: 5px solid ${current.color};`}">
-      <p style="{`color: ${current.color};`}">{`${current.currentTemp}\u00B0`}</p>
+      <p class="current-temp" style="{`color: ${current.color};`}">{`${current.currentTemp}\u00B0`}</p>
+      <p class="humidity">Humidity: <span>{current.humidity}%</span></p>
     </div>
     <div class="current-condition">
       <p class="condition">{current.condition}</p>

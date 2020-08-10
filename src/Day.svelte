@@ -19,7 +19,7 @@
   .description {
     font-size: 1.6rem;
     height: 4rem;
-    margin-bottom: .7rem;
+    margin-bottom: 1.2rem;
   }
 
   .high {
