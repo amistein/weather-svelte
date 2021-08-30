@@ -24,13 +24,6 @@
 	import Hourly from './Hourly.svelte';
 	import store, { initializeStore } from './store';
 
-	const MS_IN_HOUR = 60 * 60 * 1000;
-	const RELOAD_INTERVAL = 1; // hours
-
-  setInterval(function(){
-    window.location.reload(true)
-	}, RELOAD_INTERVAL * MS_IN_HOUR);
-
 	initializeStore();
 	const { current } = store;
 </script>
