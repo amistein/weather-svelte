@@ -35,10 +35,10 @@
 
 	(function setDate() {
 		const date = new Date()
-		const options = { timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+		const options = { timeZone: 'America/New_York', year: 'numeric', month: 'long', day: 'numeric' };
 		const dateInfo = date.toLocaleDateString('en-US', options).split(', ');
 		const [_, time] = date.toLocaleDateString('en-US', {hour: 'numeric', minute: 'numeric'}).split(', ');
-		const [weekday, monthDay, year] = dateInfo;
+		const [monthDay, year] = dateInfo;
 
 		displyedDate = `${monthDay}, ${year}`;
 		displayedTime = time;
