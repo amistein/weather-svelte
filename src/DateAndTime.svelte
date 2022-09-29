@@ -34,11 +34,9 @@
 	let displayedTime;
 
 	(function setDate() {
-		const date = new Date()
-		const options = { timeZone: 'America/New_York', year: 'numeric', month: 'long', day: 'numeric' };
-		const dateInfo = date.toLocaleDateString('en-US', options).split(', ');
+		const date = new Date();
+		const [monthDay, year] = date.toLocaleDateString('en-US', {year: 'numeric', month: 'long', day: 'numeric'}).split(', ');
 		const [_, time] = date.toLocaleDateString('en-US', {hour: 'numeric', minute: 'numeric'}).split(', ');
-		const [monthDay, year] = dateInfo;
 
 		displyedDate = `${monthDay}, ${year}`;
 		displayedTime = time;
