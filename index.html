@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" />
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+	<link rel="manifest" href="/manifest.json">
+
+	<script defer src='/build/bundle.js'></script>
+</head>
+
+<body>
+</body>
+<script>
+	const MS_IN_HOUR = 60 * 60 * 1000;
+	const RELOAD_INTERVAL = 1; // hours
+	
+	setInterval(function(){
+		window.location.reload(true)
+	}, RELOAD_INTERVAL * MS_IN_HOUR);
+</script>
+</html>
