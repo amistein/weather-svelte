@@ -4,7 +4,7 @@ const MS_IN_MINUTE = 60 * 1000;
 const INTERVAL = 4; // minutes
 const urls = {
   current: 'https://ilnwn6h04c.execute-api.us-east-1.amazonaws.com/dev/fetchCurrent',
-  days: 'https://ilnwn6h04c.execute-api.us-east-1.amazonaws.com/dev/fetchDays',
+  days: 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/get-daily',
   hourly: 'https://ilnwn6h04c.execute-api.us-east-1.amazonaws.com/dev/fetchHourly'
 };
 
@@ -14,11 +14,11 @@ export default store;
 export function initializeStore() {
   Object.entries(urls).forEach(([prop, url]) => {
     store[prop] = readable(null, async function fetchInterval(set) {
-      const response = await fetch(url);
+      const response = await fetch(url, {method: prop === 'days' ? 'POST' : 'GET'});
       const json = await response.json();
-      
+
       set(json);
-      
+
       const to = setTimeout(() => fetchInterval(set), MS_IN_MINUTE * INTERVAL);
 
       return () => clearTimeout(to);
