@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: Curl request to Supabase function
         run: |
-          curl -L -X POST 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/update-forecast'
+          curl -L -X POST 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/update-forecast' \
+          --data '{}'
