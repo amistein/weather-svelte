@@ -11,4 +11,6 @@ jobs:
     steps:
       - name: Curl request to Supabase function
         run: |
-          curl -L -X POST 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/update-forecast'
+          curl -L -X POST 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/update-forecast' \
+            -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNmZ2plY3lyZ25iamV0bXl4cW53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ5Nzc1MDUsImV4cCI6MjA2MDU1MzUwNX0.oAgMV925PBKRoJgyiycaImZvnZj02TodIWUGWUOp6pU' \
+            -H 'Content-Type: application/json'
