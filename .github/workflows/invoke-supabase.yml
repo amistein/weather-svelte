@@ -1,0 +1,14 @@
+name: Invoke Supabase Function
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  call-supabase-function:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request to Supabase function
+        run: |
+          curl -L -X POST 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/update-forecast'
