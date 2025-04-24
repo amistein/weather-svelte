@@ -49,7 +49,7 @@
 
 <div class="container" style="{`background-color: ${background};`}">
   <p class="hour">{hour}<span class="am-pm">{amPm}</span></p>
-  <p class="precip">{precip >= 30 ? precip + '%' : ''}</p>
+  <p class="precip">{precip >= 45 ? precip + '%' : ''}</p>
   <div class="icon">
     <img src={imgSrc}>
   </div>

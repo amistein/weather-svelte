@@ -5,7 +5,7 @@ const INTERVAL = 4; // minutes
 const urls = {
   current: 'https://ilnwn6h04c.execute-api.us-east-1.amazonaws.com/dev/fetchCurrent',
   days: 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/get-daily',
-  hourly: 'https://ilnwn6h04c.execute-api.us-east-1.amazonaws.com/dev/fetchHourly'
+  hourly: 'https://sfgjecyrgnbjetmyxqnw.supabase.co/functions/v1/get-hourly'
 };
 
 const store = {};
@@ -14,7 +14,7 @@ export default store;
 export function initializeStore() {
   Object.entries(urls).forEach(([prop, url]) => {
     store[prop] = readable(null, async function fetchInterval(set) {
-      const response = await fetch(url, {method: prop === 'days' ? 'POST' : 'GET'});
+      const response = await fetch(url, {method: prop === 'current' ? 'GET' : 'POST'});
       const json = await response.json();
 
       set(json);
