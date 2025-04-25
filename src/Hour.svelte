@@ -51,7 +51,7 @@
 
 <div class="container" style="{`background-color: ${background};`}">
   <p class="hour">{hour}<span class="am-pm">{amPm}</span></p>
-  <p class="precip">{precip >= 50 ? toNearest5(precip) + '%' : ''}</p>
+  <p class="precip">{precip >= 30 ? toNearest5(precip) + '%' : ''}</p>
   <div class="icon">
     <img src={imgSrc}>
   </div>
