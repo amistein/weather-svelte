@@ -94,15 +94,6 @@
 </style>
 
 <script>
-  // function tempToRGB(temp) {
-  //   const maxTemp = 100;
-  //   const minTemp = 10;
-  //   const redVal = 255 / (maxTemp - minTemp) * (temp - minTemp);
-  //   const blueVal = 255 / (maxTemp - minTemp) * (maxTemp - temp);
-
-  //   return `rgb(${redVal}, 0, ${blueVal})`;
-  // }
-
   export let current;
 </script>
 
