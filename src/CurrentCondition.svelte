@@ -12,6 +12,7 @@
   }
 
   .current-condition img {
+    margin-top: 2rem;
     margin-left: 2rem;
     width: 10rem;
   }
@@ -25,8 +26,9 @@
 
   .condition {
     text-align: center;
-    font-size: 1.4rem;
-    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-left: 1rem;
   }
 
   .temp {
@@ -61,10 +63,6 @@
     position: absolute;
     top: -25%;
     left: 5%;
-  }
-
-  .humidity > span {
-    font-size: 2rem;
   }
 
   .quickie {

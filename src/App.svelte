@@ -4,7 +4,7 @@
 		padding: 0;
 		box-sizing: border-box;
 	}
-	
+
 	:global(html) {
 		font-size: 62.5%;
 	}
@@ -25,7 +25,7 @@
 	import store, { initializeStore } from './store';
 
 	initializeStore();
-	const { current } = store;
+	const { current, details } = store;
 </script>
 
 <svelte:head>
@@ -36,7 +36,7 @@
 	{#if $current}
 		<Dashboard current={$current}/>
 		<Hourly/>
-		<Summaries forecast={$current.forecast}/>
+		<Summaries forecast={$details.forecast}/>
 	{/if}
 </div>
 
