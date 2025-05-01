@@ -1,6 +1,6 @@
 <style>
   .container {
-    width: 8rem;
+    width: 9rem;
     padding: 1rem;
     text-align: center;
     float: left;
@@ -11,7 +11,7 @@
     font-weight: 700;
     margin: .5rem;
   }
-  
+
   .condition {
     height: 4rem;
   }
