@@ -25,7 +25,7 @@
 	import store, { initializeStore } from './store';
 
 	initializeStore();
-	const { current, details } = store;
+	const { details } = store;
 </script>
 
 <svelte:head>
@@ -33,8 +33,8 @@
 </svelte:head>
 <div class="main">
 	<DateAndTime/>
-	{#if $current}
-		<Dashboard current={$current}/>
+	{#if $details}
+		<Dashboard current={$details}/>
 		<Hourly/>
 		<Summaries forecast={$details.forecast}/>
 	{/if}
